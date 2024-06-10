@@ -1,0 +1,38 @@
+program: main.py
+project: LRGB
+entity: anonymity
+name: peptides-final
+method: grid
+metric:
+  goal: maximize
+  name: best/test_ap
+parameters:
+  dropout_res:
+    value: 0.1
+  dropout_local:
+    value: 0.1
+  dropout_ff:
+    values: [0.1, 0.0]
+  base_lr:
+    value: 0.003
+  weight_decay:
+    value: 0.1
+
+  reweigh_self:
+    value: 2
+  jk:
+    value: 0
+  init_pe_dim:
+    value: 32
+  more_mapping:
+    value: 1
+  cfg:
+    value: configs/GSSC/peptides-func-GSSC.yaml
+  name_tag:
+    value: random
+  log_code:
+    value: 0
+  device:
+    value: 0
+  seed:
+    values: [0, 1, 2, 3, 4]

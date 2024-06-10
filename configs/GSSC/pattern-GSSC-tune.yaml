@@ -1,0 +1,38 @@
+program: main.py
+project: PATTERN
+entity: anonymity
+name: pattern-final
+method: grid
+metric:
+  goal: maximize
+  name: best/test_accuracy-SBM
+parameters:
+  dropout_res:
+    value: 0.5
+  dropout_local:
+    value: 0.1
+  dropout_ff:
+    value: 0.1
+  base_lr:
+    value: 0.001
+  weight_decay:
+    value: 0.1
+
+  reweigh_self:
+    value: 2
+  jk:
+    value: 1
+  init_pe_dim:
+    value: 32
+  more_mapping:
+    value: 1
+  cfg:
+    value: configs/GSSC/pattern-GSSC.yaml
+  name_tag:
+    value: random
+  log_code:
+    value: 0
+  device:
+    value: 0
+  seed:
+    values: [0, 1, 2, 3, 4]
